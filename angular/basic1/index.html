@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Basic 1</title>
+</head>
+<body>
+
+	<div ng-controller="Theme"> 
+	 	<h2>{{name}}</h2>
+	</div>
+
+	<div ng-controller="List"> 
+	 	<ul>
+	 		<li ng-repeat="list in lists">
+	 			{{ list.name }}
+	 		</li>
+	 	</ul>
+	</div>
+
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
