@@ -3,22 +3,35 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Basic 1</title>
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="main.js"></script>
+	<style>
+		.done-true{
+			text-decoration: line-through;
+			color:gray;
+		}
+	</style>
 </head>
 <body>
 
 	<div ng-controller="Theme"> 
-	 	<h2>{{name}}</h2>
+		<h1>{{name}}</h1>
 	</div>
+	<hr>
+ 	<input type="text" ng-model="yourName" placeholder="Enter a name here">
+    <hr>
+    <h1>Hello {{yourName}}!</h1>
 
-	<div ng-controller="List"> 
-	 	<ul>
-	 		<li ng-repeat="list in lists">
-	 			{{ list.name }}
-	 		</li>
-	 	</ul>
+
+	<div ng-controller="TodoController">
+		<span>{{remaining()}} of {{todos.length}} remaining</span>
+		<ul class="unstyled">
+			<li ng-repeat="todo in todos">
+				<input type="checkbox" ng-model="todo.done">
+				<span class="done-{{todo.done}}">{{todo.text}}</span>
+			</li>
+		</ul>
 	</div>
-
-	<script src="node_modules/angular/angular.min.js"></script>
-	<script src="main.js"></script>
+	
 </body>
 </html>

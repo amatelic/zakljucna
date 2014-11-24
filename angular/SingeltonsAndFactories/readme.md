@@ -5,8 +5,6 @@ Angular
 	-	poglej si lexical scopin
 	-   MVVM(model-View-ViewModel)
 	-	dodajanje angularjevih atributov
-	- 	če damo našo kodoin angular file v
-	glavo naše strani potem se nam ne prikazujejo templating imena
 
 ##Osnove angulara
  Angular ugrabi podatke is html strani in jih okrepi

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Basic 1</title>
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="main.js"></script>
+</head>
+<body>
+	
+	<div ng-controller="AngularService"> 
+		<h2>{{desc}}</h2>
+	 	<button ng-click="count(message);">Count</button>
+	 	<button ng-click="count2(message);">Count</button>
+	</div>
+
+	<hr>
+
+	<div ng-controller="AngularFactory"> 
+		<h2>{{desc}}</h2>
+	 	<button ng-click="count(message);">Count</button>
+	 	<button ng-click="count2(message);">Count</button>
+	</div>
+
+</body>
+</html>
