@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Basic 1</title>
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="main.js"></script>
+</head>
+<body>
+	
+	<div ng-controller="Templates as test"> 
+		<b>Total number of users - {{test.users.length}}</b>
+		<hr>
+		<ul>
+			<li ng-repeat="user in test.users" ng-click="test.delete(user, $index)">
+				{{user.name}}
+			</li>
+		</ul>
+		<hr>
+		<p>Add new users:</p>
+		<input type="text" ng-model="test.user">
+		<button ng-click="test.createNewUser(test.user)"> Create</button>
+		<hr>
+		<a href="" ng-click="showMenu = !showMenu">Toggle menu!</a>
+		<ul ng-show="showMenu">
+			<li>1</li>
+			<li>2</li>
+		</ul>
+	</div>
+
+	<hr>
+
+
+</body>
+</html>

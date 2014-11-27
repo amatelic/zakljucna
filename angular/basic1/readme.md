@@ -32,16 +32,6 @@ Bistvena razlika teg dveh scopih je ta, da $rootScope je prvi, ki se kreira in j
 Drugače pa $scope imajo v angularju controlerji  in data-bindings
 
 
-## Services in Factories 
-- Services so normalni singeltoni, to pomeni da so 	initializirani samo enkarat
-- Dobra praksa uporabljati Pascal Case primer "my service" bi bil "MyService"
-
-Service metoda je namenjena initializaciji ene določene funkcjonalnosti, kot primer (mail, registracija)
-
-V servisah shranjujemo vso logiko našega modela podatkov in podjetniške logike, kot primer klicov v REST api 
-
-### Pomembno 
-- service kreira samo konstruktor objekt, ki se klice s pomocjo besede new
 
 ##Dodatki linki
 - http://stackoverflow.com/questions/16125872/why-ng-bind-is-better-than-in-angular
