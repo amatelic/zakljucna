@@ -27,6 +27,13 @@
 		};
 	});
 
+	app.controller('Angular2Service', function( $scope, CountService ) {
+		$scope.desc = "Click event with angular service";
+		$scope.count = function() {
+			alert(CountService.count());
+		};
+	});
+
 	/*================================================
 	=            Izdelava factory servisa            =
 	================================================*/
@@ -46,7 +53,10 @@
 		$scope.count = function() {
 			alert(testFactory.count());
 		};
-		$scope.count2 = function() {
+	});
+	app.controller('Angular2Factory', function( $scope, testFactory ) {
+		$scope.desc = "Click event with angular factory";
+		$scope.count = function() {
 			alert(testFactory.count());
 		};
 	});

@@ -3,24 +3,34 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Basic 1</title>
-	<script src="node_modules/angular/angular.min.js"></script>
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<script src="../node_modules/angular/angular.min.js"></script>
 	<script src="main.js"></script>
 </head>
 <body>
-	
-	<div ng-controller="AngularService"> 
-		<h2>{{desc}}</h2>
-	 	<button ng-click="count(message);">Count</button>
-	 	<button ng-click="count2(message);">Count</button>
-	</div>
-
-	<hr>
-
-	<div ng-controller="AngularFactory"> 
-		<h2>{{desc}}</h2>
-	 	<button ng-click="count(message);">Count</button>
-	 	<button ng-click="count2(message);">Count</button>
-	</div>
-
+	<div class="row">
+  		<div class="col-md-12">
+			<h2>Primerjava Singeltonov in Factoryev</h2>
+  		</div>	
+  		<div class="col-md-6">
+			<div ng-controller="AngularService"> 
+				<h2>{{desc}}</h2>
+			 	<button class="btn btn-default" ng-click="count(message);">Count</button>
+			</div>
+			<div ng-controller="Angular2Service"> 
+				<h2>{{desc}}</h2>
+			 	<button class="btn btn-default" ng-click="count(message);">Count</button>
+			</div>
+  		</div>	
+  		<div class="col-md-6">
+			<div ng-controller="AngularFactory"> 
+				<h2>{{desc}}</h2>
+			 	<button class="btn btn-default" ng-click="count(message);">Count</button>
+			</div>
+			<div ng-controller="Angular2Factory"> 
+				<h2>{{desc}}</h2>
+			 	<button class="btn btn-default" ng-click="count(message);">Count</button>
+			</div>
+  		</div>	
 </body>
 </html>
