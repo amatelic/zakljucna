@@ -15,6 +15,7 @@
 		<div ng-controller="Templates as test"> 
 	  		<div class="col-md-4">
 	  			<h3>Izpis uporabnikov</h3>
+	  			{{movies}}
 				<b>Končno število uporabnikov - {{test.users.length}}</b>
 				<ul ng-show="!showMenu">
 					<li ng-repeat="user in test.users" ng-click="test.delete(user, $index)">
