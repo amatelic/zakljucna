@@ -23,9 +23,12 @@ Verzija		  | Datum objave | Spremebbe	| Edition
 
 ###Modules in es6
 
+Največji problem, ki ga naletimo pri javascriptu je ta, da nima pravega načina imporatanja knjižnic 
+
 Primer commonJS
  ```javascript 
  	require('./Kolekcija');
+ 	
  	var _ = require('underscore');
 
 ```
