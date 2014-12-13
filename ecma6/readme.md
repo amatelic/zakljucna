@@ -19,29 +19,52 @@ Verzija		  | Datum objave | Spremebbe	| Edition
 6			  |		?		 |		?		 |Allen Wirfs-Brock|
 7			  |		?		 |		?		 |				 |
 
-## Kaj je novega v ecma6
+## Novosti v ees
 
-###Modules in es6
+###Moduli v es6
 
-Največji problem, ki ga naletimo pri javascriptu je ta, da nima pravega načina imporatanja knjižnic 
+Velik problem, ki ga ima programski jezik javacript je ta, da ni imela  nobene možnosti importanja knjižnic, modulov ki so bili zasebni ali dostopni vsem. Zato so bili pred es6 ustvarjena dva standarda, 
+commomJS, ki je zaslavel v node.js skupnosti in se izvaja sinhrono in  AMD, ki se je uvedel v brskalniki, primer take knjižnice je require.js, ki se izvaja asihrono.
 
-Primer commonJS
- ```javascript 
- 	require('./Kolekcija');
- 	
- 	var _ = require('underscore');
+####CommonJS
 
-```
-
+CommonJS deluje tako da naše datoteke, ki jih želimo imeti javno dodamo spredaj pred vsako funkcijo ali spremenljivko besedo export. Vse kar nima besede export spredaj je nevidna izven import funkcije.
 Primer exporta
- ```javascript 
- 	module Kolekcija{
- 		export function Dist(){console.log("module")}
+ ```javascript
+	var a = 3; //privatna
+	var b = 3; //privatna
+ 	export.sum = function(){
+ 		return a + b; //javna
  	}
-
 ```
+Primer klicanja modula ali knjižnice je zelo preprosto vse kar naredimo je da kličemo funkcijo require plus ime datoteke
+
+Primer import
+ ```javascript 
+
+ 	require('./Kolekcija');//Primer klica datoteke Kolekcija.js
+
+ 	sum();//vrne 6
+ 	a// vrne undefined
+ 	
+ 	//Primer klica modula v spremenljivko
+ 	var _ = require('underscore');
+```
+####AMD
+- še manka
+
+####Es6 modules
+Ampak v es6 standardu se je uvedel standar commonJS, tukaj je primer importa datoteke in knjižnice v spremenljivko.
 Primer importa
  ```javascript 
-	import { Dist } from "Kolekcija.js";
+	import { Dist } from "Kolekcija.js"; //
 	import { $ } from "jquery.js";
+```
+in še primer exporta datoteke
+Primer importa
+ ```javascript 
+	var local = 123;
+	export.hello = function(){
+	return "Hello word!";
+}
 ```
